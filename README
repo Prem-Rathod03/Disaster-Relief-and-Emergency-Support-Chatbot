@@ -1,0 +1,43 @@
+## 🚀 How to Start the FastAPI Backend Manually
+
+### 1. Clone the repository
+```bash
+git clone https://github.com/yourusername/your-repo.git
+cd your-repo
+```
+
+### 2. (Recommended) Create and activate a virtual environment
+
+**On Mac/Linux:**
+```bash
+python3 -m venv .venv
+source .venv/bin/activate
+```
+
+**On Windows:**
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+```
+
+### 3. Install dependencies
+```bash
+pip install fastapi uvicorn
+```
+
+### 4. Start the FastAPI backend server
+```bash
+uvicorn disaster_relief_chatbot:app --reload
+```
+- The server will run at [http://127.0.0.1:8000](http://127.0.0.1:8000)
+- **Keep this terminal window open** while you use the chatbot.
+
+### 5. Test the backend
+Open your browser and go to [http://127.0.0.1:8000/ping].  
+You should see a JSON response confirming the server is online.
+
+---
+
+**Note:**  
+You must manually start the backend server each time you want to use the chatbot locally.  
+If you close the terminal or stop the server, the backend will no longer be available until you start it again.
