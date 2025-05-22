@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Disaster Relief and Emergency Support Chatbot</title>
+    <link rel="stylesheet" href="styles.css" />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <div
+      class="chat-container"
+      role="main"
+      aria-label="Disaster relief and emergency Support chatbot"
+    >
+      <button class="back-btn" onclick="location.href='index.html'">← Back to Home</button>
+      <header>
+        <div class="logo" aria-hidden="true">&#9888;</div>
+        <span>Disaster relief and emergency Support chatbot</span>
+      </header>
+      <div
+        class="messages"
+        id="messages"
+        aria-live="polite"
+        aria-relevant="additions"
+      ></div>
+      <form
+        class="input-area"
+        id="chat-form"
+        autocomplete="off"
+        aria-label="Send message form"
+      >
+        <input
+          type="text"
+          id="user-input"
+          placeholder="Type your message..."
+          aria-label="Message input"
+          required
+          autocomplete="off"
+        />
+        <button type="submit" aria-label="Send message">Send</button>
+      </form>
+      <footer>Stay safe. Type your emergency or relief question.</footer>
+    </div>
+    <script src="scripts.js"></script>
+  </body>
+</html>

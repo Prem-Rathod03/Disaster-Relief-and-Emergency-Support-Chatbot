@@ -1,0 +1,353 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&family=Roboto+Mono&display=swap");
+
+:root {
+  --primary-color: #d94f4f;
+  --secondary-color: #f79c90;
+  --text-color-light: #fff;
+  --background-gradient: #ffecec;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body,
+html {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: "Poppins", Arial, sans-serif;
+  background: var(--background-gradient, #ffecec);
+  color: var(--primary-color, #d94f4f);
+}
+
+body {
+  min-height: 100vh;
+}
+
+header nav {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 2rem;
+}
+
+header nav button {
+  background: var(--primary-color, #d94f4f);
+  color: var(--text-color-light, #fff);
+  border: none;
+  border-radius: 8px;
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+header nav button:hover {
+  background: var(--secondary-color, #f79c90);
+  color: var(--primary-color, #d94f4f);
+}
+
+main {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+#landing-page {
+  min-height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+/* Landing page heading and subheading styles */
+#landing-page h1 {
+  font-family: "Poppins", Arial, sans-serif;
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--primary-color, #d94f4f);
+  margin-bottom: 1rem;
+  letter-spacing: 1px;
+  text-shadow: 0 2px 8px rgba(217, 79, 79, 0.08);
+}
+
+#landing-page p {
+  font-family: "Roboto Mono", "Poppins", Arial, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: #444;
+  margin-bottom: 2.5rem;
+  letter-spacing: 0.5px;
+}
+
+#start-chat-btn {
+  margin-top: 2rem;
+  background: var(--primary-color, #d94f4f);
+  color: var(--text-color-light, #fff);
+  border: none;
+  border-radius: 8px;
+  padding: 0.9rem 2rem;
+  font-size: 1.15rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(217, 79, 79, 0.08);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+}
+
+#start-chat-btn:hover {
+  background: var(--secondary-color, #f79c90);
+  color: var(--primary-color, #d94f4f);
+  transform: translateY(-2px) scale(1.03);
+}
+
+.chat-container {
+  background: #fff;
+  border-radius: 16px;
+  box-shadow: 0 4px 24px rgba(217, 79, 79, 0.10);
+  width: 100%;
+  max-width: 400px;
+  min-height: 600px;
+  margin: 40px auto;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  padding: 0;
+  position: relative;
+}
+
+.back-btn {
+  position: absolute;
+  top: 18px;
+  left: 18px;
+  background: var(--secondary-color, #f79c90);
+  color: var(--primary-color, #d94f4f);
+  border: none;
+  border-radius: 8px;
+  padding: 0.4rem 1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+  box-shadow: 0 2px 8px rgba(217, 79, 79, 0.08);
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  z-index: 2;
+}
+
+.back-btn:hover {
+  background: var(--primary-color, #d94f4f);
+  color: var(--text-color-light, #fff);
+}
+
+.chat-container header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 3.5rem 1rem 1rem 1rem; /* increased top padding */
+  font-weight: 600;
+  font-size: 1.1rem;
+  border-bottom: 1px solid #e0e0e0;
+  background: #f8fafc;
+  border-radius: 16px 16px 0 0;
+  color: var(--primary-color, #d94f4f);
+}
+
+.logo {
+  font-size: 2rem;
+  color: #fbbf24;
+}
+
+messages {
+  flex: 1;
+  padding: 1rem;
+  overflow-y: auto;
+  background: #f9fafb;
+  color: #222;
+}
+
+.input-area {
+  display: flex;
+  gap: 0.5rem;
+  padding: 1rem;
+  border-top: 1px solid #e0e0e0;
+  background: #f8fafc;
+}
+
+.input-area input[type="text"] {
+  flex: 1;
+  padding: 0.75rem;
+  border: 1px solid #d1d5db;
+  border-radius: 8px;
+  font-size: 1rem;
+  outline: none;
+  background: #fff;
+  color: #222;
+}
+
+.input-area button {
+  padding: 0.75rem 1.25rem;
+  background: var(--primary-color, #d94f4f);
+  color: var(--text-color-light, #fff);
+  border: none;
+  border-radius: 8px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+
+.input-area button:hover {
+  background: var(--secondary-color, #f79c90);
+  color: var(--primary-color, #d94f4f);
+}
+
+footer {
+  text-align: center;
+  padding: 0.75rem 1rem;
+  font-size: 0.95rem;
+  color: #64748b;
+  background: #f8fafc;
+  border-radius: 0 0 16px 16px;
+  border-top: 1px solid #e0e0e0;
+}
+
+#about-us h1 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary-color, #d94f4f);
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.team-members {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.member-card {
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(217, 79, 79, 0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  width: 220px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.member-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(217, 79, 79, 0.13);
+}
+
+.member-card img {
+  width: 100px;
+  height: 100px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--primary-color, #d94f4f);
+  margin-bottom: 1rem;
+  transition: transform 0.3s;
+}
+
+.member-card img:hover {
+  transform: scale(1.15);
+  z-index: 1;
+}
+
+.member-card h2 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.2rem 0;
+  color: var(--primary-color, #d94f4f);
+}
+
+.member-card p {
+  font-family: 'Roboto Mono', 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin: 0;
+}
+
+/* Projects Page */
+#projects {
+  max-width: 1000px;
+  margin: 3rem auto;
+  padding: 2rem;
+  background: #fff;
+  border-radius: 18px;
+  box-shadow: 0 4px 24px rgba(217, 79, 79, 0.08);
+  text-align: center;
+}
+
+#projects h1 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 2.2rem;
+  color: var(--primary-color, #d94f4f);
+  margin-bottom: 2.5rem;
+  letter-spacing: 1px;
+}
+
+.project-list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 2rem;
+  justify-content: center;
+}
+
+.project-card {
+  background: #f8fafc;
+  border-radius: 14px;
+  box-shadow: 0 2px 12px rgba(217, 79, 79, 0.07);
+  padding: 2rem 1.5rem 1.5rem 1.5rem;
+  width: 280px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  transition: transform 0.15s, box-shadow 0.15s;
+}
+
+.project-card:hover {
+  transform: translateY(-6px) scale(1.03);
+  box-shadow: 0 6px 24px rgba(217, 79, 79, 0.13);
+}
+
+.project-card h2 {
+  font-family: 'Poppins', Arial, sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  margin: 0.5rem 0 0.7rem 0;
+  color: var(--primary-color, #d94f4f);
+}
+
+.project-card p {
+  font-family: 'Roboto Mono', 'Poppins', Arial, sans-serif;
+  font-size: 1rem;
+  color: #444;
+  margin-bottom: 1.2rem;
+}
+
+.project-link {
+  display: inline-block;
+  background: var(--primary-color, #d94f4f);
+  color: var(--text-color-light, #fff);
+  border-radius: 8px;
+  padding: 0.6rem 1.3rem;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s, transform 0.1s;
+  box-shadow: 0 2px 8px rgba(217, 79, 79, 0.08);
+}
+
+.project-link:hover {
+  background: var(--secondary-color, #f79c90);
+  color: var(--primary-color, #d94f4f);
+  transform: translateY(-2px) scale(1.03);
+}
