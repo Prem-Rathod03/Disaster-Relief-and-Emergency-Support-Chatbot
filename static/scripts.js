@@ -29,7 +29,7 @@
         },
         body: JSON.stringify({
           message: msg,
-          user_id: "default_user", // Can be replaced with unique ID if needed
+          user_id: "default_user",
         }),
       });
 
