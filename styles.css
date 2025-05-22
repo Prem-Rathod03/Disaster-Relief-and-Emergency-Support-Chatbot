@@ -160,7 +160,7 @@ main {
   color: #fbbf24;
 }
 
-messages {
+.messages {
   flex: 1;
   padding: 1rem;
   overflow-y: auto;
